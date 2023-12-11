@@ -4,13 +4,13 @@ import Logo from "../img/LogoCoffe.jpg";
 const NavBar = () => {
     return (
         <div className="container">
-        <nav className="navbar" role="navigation" aria-label="main navigation">
+        < nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
         <a className="navbar-item" href="/">
         <img src={Logo} width="60" height="20" alt="Logo"></img>
         </a>
 
-    <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+    <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" href="/">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -34,10 +34,10 @@ const NavBar = () => {
 
         <div className="navbar-dropdown">
           <a className="navbar-item" href="/">
-            About
+            Cafes
           </a>
           <a className="navbar-item" href="/">
-            Jobs
+            Cafeteras
           </a>
         </div>
       </div>
