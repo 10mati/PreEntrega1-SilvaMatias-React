@@ -1,5 +1,6 @@
 import CartWidget from "../CartWidget/CartWidget";
 import Logo from "../img/LogoCoffe.jpg";
+import { NavLink, Link } from "react-router-dom";
 
 const NavBar = () => {
     return (
@@ -19,9 +20,9 @@ const NavBar = () => {
 
   <div id="navbarBasicExample" className="navbar-menu">
     <div className="navbar-start">
-      <a className="navbar-item" href="/">
+      <Link className="navbar-item" to="/">
        Inicio
-      </a>
+      </Link>
 
       <a className="navbar-item" href="/">
         Contacto
@@ -33,12 +34,12 @@ const NavBar = () => {
         </a>
 
         <div className="navbar-dropdown">
-          <a className="navbar-item" href="/">
+          <a className="navbar-item" href={"/category/cafes"}>
             Cafes
           </a>
-          <a className="navbar-item" href="/">
+          < NavLink to={`/category/cafeteras`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'  }>
             Cafeteras
-          </a>
+          </NavLink>
         </div>
       </div>
     </div>
