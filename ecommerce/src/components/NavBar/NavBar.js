@@ -34,10 +34,10 @@ const NavBar = () => {
         </a>
 
         <div className="navbar-dropdown">
-          <a className="navbar-item" href={"/category/cafes"}>
+          <a className="navbar-item" href={`/category/cafes`}>
             Cafes
           </a>
-          < NavLink to={`/category/cafeteras`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'  }>
+          < NavLink to="/category/cafeteras">
             Cafeteras
           </NavLink>
         </div>
