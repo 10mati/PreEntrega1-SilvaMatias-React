@@ -5,7 +5,7 @@ const products = [
     { 
         id:"1",
         name: " Cafe Brazil",
-        price:"2000",
+        price:2000,
         category:"cafes",
         img : "https://ss-static-01.esmsv.com/id/159079/productos/obtenerimagen/?id=443&useDensity=true&width=1920&height=1080&tipoEscala=fit",
         stock:25,
@@ -14,7 +14,7 @@ const products = [
     { 
         id:"2",
         name: " Cafe Italiano",
-        price:"2500",
+        price:2500,
         category:"cafes",
         img: "https://ss-static-01.esmsv.com/id/159079/productos/obtenerimagen/?id=455&useDensity=true&width=1920&height=1080&tipoEscala=fit",
         stock:25,
@@ -23,7 +23,7 @@ const products = [
     { 
         id:"3",
         name: " Cafe Colombia",
-        price:"3000",
+        price:3000,
         category:"cafes",
         img: "https://ss-static-01.esmsv.com/id/159079/productos/obtenerimagen/?id=429&useDensity=true&width=1920&height=1080&tipoEscala=fit",
         stock:25,
@@ -32,7 +32,7 @@ const products = [
     { 
         id:"4",
         name: "Cafetera Volturno Clasica",
-        price:"30000",
+        price:30000,
         category:"cafeteras",
         img: "https://ss-static-01.esmsv.com/id/159079/productos/obtenerimagen/?id=247&useDensity=true&width=1920&height=1080&tipoEscala=fit",
         stock:25,
@@ -41,7 +41,7 @@ const products = [
     { 
         id:"5",
         name: "Cafetera Italiana Acero Inoxidable",
-        price:"40000",
+        price:40000,
         category:"cafeteras",
         img: "https://ss-static-01.esmsv.com/id/159079/productos/obtenerimagen/?id=337&useDensity=true&width=1920&height=1080&tipoEscala=fit",
         stock:25,
@@ -50,7 +50,7 @@ const products = [
     { 
         id:"6",
         name: "Cafetera Volturno Glasse",
-        price:"40000",
+        price:40000,
         category:"cafeteras",
         img: "https://ss-static-01.esmsv.com/id/159079/productos/obtenerimagen/?id=255&useDensity=true&width=1920&height=1080&tipoEscala=fit",
         stock:25,

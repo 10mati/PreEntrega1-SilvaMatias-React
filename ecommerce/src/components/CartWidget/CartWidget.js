@@ -9,11 +9,12 @@ const CartWidget = () => {
 
     return (
         
-            <Link to="/cart"  style={{display: totalQuantity > 0 ? 'block': 'none'}}>
+            <Link to="/cart" >
             <FiShoppingCart />
-          <i className="icon is-large">{totalQuantity}</i>  
-          </Link>
+            <span className="icon"> {totalQuantity() || ''} </span>
+            </Link>
         
-    )
-}
-export default CartWidget
+    );
+};
+
+export default CartWidget;

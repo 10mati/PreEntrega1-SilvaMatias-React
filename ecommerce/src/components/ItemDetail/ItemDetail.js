@@ -16,7 +16,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock}) => {
          addItem (item, quantity)
     }
     return (
-        <div className="card column is-4 mx-auto has-background-grey-light ">
+        <div className="card column is-4 mx-auto has-background-grey-light mt-6 ">
             <h2 className="has-text-black-bis mb-3"> {name} </h2>
             <figure className="image is-128x128 m-auto "><img src= {img} alt={name}/></figure>
             <p>PRECIO : ${price}</p>
@@ -26,7 +26,10 @@ const ItemDetail = ({ id, name, img, category, description, price, stock}) => {
             <div>
                 {
                 quantityAdded > 0 ? (
+                    <>
                     <Link to= '/cart' className="button is-outlined mt-2">Terminar Compra</Link>
+                    <Link to= '/' className="button is-outlined mt-2 ml-2">Seguir Comprando</Link>
+                    </>
                 ) : (
                    < ItemCount initial={1} stock={stock} onAdd={handleOnAdd}/>
                )

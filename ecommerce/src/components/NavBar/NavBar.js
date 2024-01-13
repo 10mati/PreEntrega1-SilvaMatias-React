@@ -1,11 +1,11 @@
 import CartWidget from "../CartWidget/CartWidget";
 import Logo from "../img/LogoCoffe.jpg";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
     return (
-        <div className="container">
-        < nav className="navbar" role="navigation" aria-label="main navigation">
+
+        <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
         <a className="navbar-item" href="/">
         <img src={Logo} width="60" height="20" alt="Logo"></img>
@@ -24,22 +24,25 @@ const NavBar = () => {
        Inicio
       </Link>
 
-      <a className="navbar-item" href="/">
-        Contacto
-      </a>
+      <Link to="/" className="navbar-item">
+          Contacto
+        </Link>
 
       <div className="navbar-item has-dropdown is-hoverable">
-        <a className="navbar-link"href="/">
+        <Link to="/" className="navbar-link">
           Productos
-        </a>
+        </Link>
 
         <div className="navbar-dropdown">
-          <a className="navbar-item" href={`/category/cafes`}>
+          <Link to="/category/cafes"  className="navbar-item">
             Cafes
-          </a>
-          < NavLink to="/category/cafeteras">
+          </Link>
+
+          < Link to="/category/cafeteras" className="navbar-item">
             Cafeteras
-          </NavLink>
+          </Link>
+          
+          </div>
         </div>
       </div>
     </div>
@@ -53,9 +56,8 @@ const NavBar = () => {
         </div>
       </div>
     </div>
-  </div>
 </nav>
-</div>
-    )
+ );
 }
+
 export default NavBar;

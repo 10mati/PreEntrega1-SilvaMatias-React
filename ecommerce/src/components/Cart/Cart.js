@@ -5,23 +5,28 @@ import CartItem from "../CartItem/CartItem"
 
 
 const Cart = () => {
-    const {cart, clearCart, totalQuantity, total} = useContext (CartContext)
+    const {cart, totalPrice, clearCart} = useContext (CartContext)
 
-    if (totalQuantity === 0) {
-        return(
-            <div>
-                <h1>EL CARRITO ESTA VACIO</h1>
-                <Link to='/' className="Option">Productos</Link>
+    if (cart.length === 0) {
+        return (
+            <div className="pt6 ">
+                <h1 className="title is-size-1 mt-6"> EL CARRITO ESTA VACIO </h1>
+                <Link to='/' className="button is-medium is-outlined">Productos</Link>
             </div>
-        )
+        );
     }
-    return(
+    return( 
         <div>
-            { cart.map(products => <CartItem key={products.id} {...products}/>)}
-            <h3>TOTAL: ${total}</h3>
-            <button onClick={()=> clearCart()}>Limpiar Carrito</button>
-            
+            { cart.map(p => <CartItem key={p.id} {...p}/>) }
+            <h1 className="is-size-4">TOTAL: $ { totalPrice() }</h1>
+
+            <div className="is-flex is-flex-direction-column is-align-items-center">
+            <button className="button is-danger is-outlined mb-2 mt-4" onClick={clearCart}>Limpiar Carrito</button>
+            <Link to='/Checkout' className="button is-link is-outlined ">Checkout</Link>
+            </div>
+
         </div>
+
     )
 }
 

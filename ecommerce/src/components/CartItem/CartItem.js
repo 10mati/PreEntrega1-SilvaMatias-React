@@ -3,17 +3,20 @@ import React from "react";
 import { useContext } from "react";
 
 
-const CartItem = ({product}) => {
-    const {removeProducts} = useContext (CartContext)
+const CartItem = ({id, name, quantity, price}) => {
+    const {removeItem} = useContext (CartContext)
 
     return (
-        <div> 
-        <img src={product.img} alt={product.name}/>
-        <h2>{product.name}</h2>
-        <p>cantidad: {product.quantity}</p>
-        <p>Subtotal: {product.quantity * product.price}</p>
-        <button onClick={() => removeProducts(product.id)}>Eliminar</button>
+        
+        <div className="tabs is-medium is-centered mt-6 is-justify-content-space-around has-background-white-ter"> 
+        <h2>{name}</h2>
+        <p>cantidad: {quantity}</p>
+        <p>Subtotal: {quantity * price}</p>
+        <button  className="button is-danger is-outlined" onClick={() => removeItem(id)}>x</button>
+        
         </div>
+    
+    
     )
 }
 export default CartItem;
